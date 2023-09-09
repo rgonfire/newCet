@@ -16,7 +16,6 @@
   },
   "devDependencies": {
     "class-variance-authority": "^0.7.0",
-    "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "prettier-plugin-tailwindcss": "^0.5.4",
     "tailwind-merge": "^1.14.0"
