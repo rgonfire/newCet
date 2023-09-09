@@ -13,10 +13,10 @@ export interface Props {
 ---
 
 <Layout
-	pageTitle="FrontEnd Developer - @rgonfire"
+	pageTitle="Cocheras Eléctricas En Torreón | Reparación De Cocheras | Mantenimiento De Cocheras"
 	metaDescription="..."
 	openGraphLinkImg="https://www.rgonfire.com/img/vista-del-sistema-vectores-horizontal.png"
-	openGraphAltImg="FrontEnd Developer - @rgonfire"
+	openGraphAltImg="Cocheras Eléctricas En Torreón | Reparación De Cocheras | Mantenimiento De Cocheras"
 >
 	<Hero />
 
@@ -116,7 +116,7 @@ export interface Props {
 	  
 			  <!-- Description -->			  
 				<h4 class="font-bold">Horarios:</h4>				
-				Lunes a Sabado de 9:00 - 19:00.							
+				Lunes a Sabado de 9:00 - 18:00.							
 				<h4 class="font-bold">Teléfono:</h4>					
 				<a href="tel:8711413457">8711413457</a>								
 				<h4 class="font-bold">Dirección:</h4>					
@@ -156,5 +156,42 @@ export interface Props {
 		  </div>
 		</div>
 	  </footer>
+
+	  <script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "LocalBusiness",
+		  "name": "Cocheras electricas torreon",
+		  "image": "",
+		  "@id": "",
+		  "url": "https://cocheraselectricastorreon.com.mx/",
+		  "telephone": "8711413457",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "Calle Río Sena 1357, Magdalenas",
+			"addressLocality": "Torreon",
+			"postalCode": "27010",
+			"addressCountry": "MX"
+		  },
+		  "geo": {
+			"@type": "GeoCoordinates",
+			"latitude": 25.567346275851165,
+			"longitude": -103.41883191399589
+		  },
+		  "openingHoursSpecification": {
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+			  "Monday",
+			  "Tuesday",
+			  "Wednesday",
+			  "Thursday",
+			  "Friday",
+			  "Saturday"
+			],
+			"opens": "09:00",
+			"closes": "18:00"
+		  } 
+		}
+		</script>
 
 </Layout>
