@@ -1,0 +1,11 @@
+---
+import { twMerge } from "tailwind-merge"
+
+export interface Props {
+	dynamicClasses?: string
+}
+
+const { dynamicClasses } = Astro.props
+---
+
+<span class={twMerge(dynamicClasses)}>CET ℠</span>

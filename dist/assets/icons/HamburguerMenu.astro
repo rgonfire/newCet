@@ -1,0 +1,22 @@
+---
+import { twMerge } from 'tailwind-merge'
+
+export interface Props {
+  id?: string
+  dynamicClasses?: string
+}
+
+const { id, dynamicClasses } = Astro.props
+---
+
+<svg
+  class={twMerge(dynamicClasses)}
+  id=`${id}`
+  xmlns='http://www.w3.org/2000/svg'
+  fill='none'
+  viewBox='0 0 24 24'
+  stroke='currentColor'
+  aria-hidden='true'
+>
+  <path stroke-width='2.5' d='M0 6l50 0M10 12l100 0M0 18l50 0'></path>
+</svg>
