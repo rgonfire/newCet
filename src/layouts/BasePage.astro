@@ -1,0 +1,76 @@
+---
+export interface Props {
+	pageTitle: string
+	metaDescription: string
+	openGraphLinkImg: string
+	openGraphAltImg: string
+}
+
+const { pageTitle, metaDescription, openGraphLinkImg, openGraphAltImg } = Astro.props
+---
+
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{pageTitle}</title>
+		<meta name="description" content={metaDescription} />
+
+		<!-- Open Graph -->
+		<meta property="og:url" content="https://www.rgonfire.com" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="og:image" content={openGraphLinkImg} />
+		<meta property="og:image:alt" content={openGraphAltImg} />
+	</head>
+
+	<body>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<script>
+	/**
+	 * @description Remove inputs focus when the user:
+	 * - Does click outside the input.
+	 * - Press Escape and Enter when he writes on an input.
+	 */
+
+	window.addEventListener("keyup", (event) => {
+		const target = event.target as HTMLElement
+
+		if (event.key === "Escape" || (event.key === "Enter" && target.tagName === "INPUT")) {
+			target.blur()
+		}
+	})
+
+	window.addEventListener("blur", (event) => {
+		const target = event.target as HTMLElement
+		if (target.tagName === "INPUT") {
+			target.blur()
+		}
+	})
+
+	/**
+	 * @description Remove dialog modals when the user:
+	 * - Press Escape.
+	 */
+
+	function closeDialog(dialog: HTMLDialogElement) {
+		document.documentElement.classList.remove("overflow-hidden")
+		dialog.classList.add("hidden")
+		dialog.close()
+	}
+
+	window.addEventListener("keydown", (event) => {
+		const target = event.target as HTMLElement
+
+		if (event.key === "Escape" && target.tagName === "DIALOG") {
+			const dialog = target as HTMLDialogElement
+			closeDialog(dialog)
+		}
+	})
+</script>

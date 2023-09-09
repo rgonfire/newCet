@@ -1,0 +1,13 @@
+---
+import { twMerge } from "tailwind-merge"
+
+export interface Props {
+	dynamicClasses?: string
+}
+
+const { dynamicClasses } = Astro.props
+---
+
+<div class={twMerge(`relative overflow-hidden`, dynamicClasses)}>
+	<slot />
+</div>

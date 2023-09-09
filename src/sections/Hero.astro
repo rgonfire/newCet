@@ -1,0 +1,43 @@
+---
+import Circle from "@components/shapes/Circle.astro"
+import CenteredContainer from "@components/containers/CenteredContainer.astro"
+import Navbar from "@components/navbar/Navbar.astro"
+import BackgroundLayer from "@components/layers/BackgroundLayer.astro"
+import GlassmorphismBackgroundLayer from "@components/layers/GlassmorphismBackgroundLayer.astro"
+import TitleHeader from "@components/TitleHeader.astro"
+import Button from "@components/Button.astro"
+---
+
+<BackgroundLayer dynamicClasses="py-[17rem] md:py-[19rem] bg-[#8DC841]/70">
+	<header class="absolute top-0 z-[3] w-screen py-1">
+		<Navbar />
+	</header>
+
+	<CenteredContainer>
+		<TitleHeader
+			title="Especialistas en reparación y mantenimiento de cocheras eléctricas en torreon"
+			dynamicClasses="max-w-4xl text-4xl sm:text-5xl md:text-6xl capitalize"
+		/>
+		<span
+			class="mb-4 max-w-2xl text-center text-base sm:text-lg md:mb-8 md:text-2xl"
+			>Reparación, Mantenimiento y Automatización de Cocheras en Torreón,
+			Coahuila</span
+		>
+		<div
+			class="mt-4 flex w-full flex-col items-center justify-center gap-x-8 gap-y-4 text-sm sm:flex-row md:gap-y-0"
+		>
+			<a href="tel:8711413457">
+				<Button
+					variant="default"
+					size="lg"
+					text="Agendar Cita: 8711413457"
+				/>
+			</a>
+			
+		</div>
+	</CenteredContainer>
+
+	<!-- Background Styles -->
+	<Circle dynamicClasses="top-1/3 w-[35rem] h-[35rem] bg-green-200/20" />
+	<GlassmorphismBackgroundLayer />
+</BackgroundLayer>

@@ -1,0 +1,41 @@
+---
+import { twMerge } from "tailwind-merge"
+
+export interface Props {
+	dynamicClasses?: string
+}
+
+const { dynamicClasses } = Astro.props
+---
+
+<div class={twMerge(`absolute rounded-full animate-moveVariable z-0`, dynamicClasses)}></div>
+
+<style>
+	@keyframes moveVariable {
+		0% {
+			transform: translate(0px, 0px) scale(1);
+		}
+		15% {
+			transform: translate(50px, -100px) scale(0.9);
+		}
+		30% {
+			transform: translate(100px, -200px) scale(0.85);
+		}
+		60% {
+			transform: translate(200px, -300px) scale(0.82);
+		}
+		75% {
+			transform: translate(100px, -200px) scale(0.85);
+		}
+		90% {
+			transform: translate(50px, -100px) scale(0.9);
+		}
+		100% {
+			transform: translate(0px, 0px) scale(1);
+		}
+	}
+
+	.animate-moveVariable {
+		animation: moveVariable 15s linear infinite alternate-reverse;
+	}
+</style>

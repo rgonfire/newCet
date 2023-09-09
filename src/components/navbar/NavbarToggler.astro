@@ -1,0 +1,18 @@
+---
+import HamburguerMenu from "@icons/HamburguerMenu.astro"
+import Close from "@icons/Close.astro"
+---
+
+<button
+	id="btnOpenCloseMenu"
+	type="button"
+	class="flex-row-center rounded-md p-2 lg:hidden"
+	aria-controls="mobile-menu"
+	aria-expanded="false"
+>
+	<span class="sr-only">Abrir menu principal</span>
+	<HamburguerMenu id="hamburguerIcon" dynamicClasses="h-3.5 w-3.5 text-black" />
+
+	<span class="sr-only">Cerrar menu principal</span>
+	<Close id="closeIcon" dynamicClasses="hidden h-3.5 w-3.5 text-black" />
+</button>

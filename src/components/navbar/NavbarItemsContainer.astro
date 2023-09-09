@@ -1,0 +1,19 @@
+---
+import { twMerge } from "tailwind-merge"
+
+export interface Props {
+	layout: "mobile" | "desktop"
+	dynamicClasses?: string
+}
+
+export const layoutClasses = {
+	mobile: "flex justify-center items-center gap-y-8 grow text-4xl font-semibold uppercase",
+	desktop: "lg:flex lg:justify-center lg:items-center hidden grow gap-x-6 text-xs capitalize"
+}
+
+const { layout, dynamicClasses } = Astro.props
+---
+
+<ul class={twMerge(layoutClasses[layout], dynamicClasses)}>
+	<slot />
+</ul>

@@ -1,0 +1,160 @@
+---
+import Hero from "@sections/Hero.astro"
+import Layout from "@layouts/BasePage.astro"
+import Logo from "@iconsLogo.astro"
+import BlurCta from "@components/BlurCta.astro"
+
+export interface Props {
+		miniTitle: string
+		title: string
+	  }
+	  
+	  const { title, miniTitle } = Astro.props
+---
+
+<Layout
+	pageTitle="FrontEnd Developer - @rgonfire"
+	metaDescription="..."
+	openGraphLinkImg="https://www.rgonfire.com/img/vista-del-sistema-vectores-horizontal.png"
+	openGraphAltImg="FrontEnd Developer - @rgonfire"
+>
+	<Hero />
+
+	  <div class='bg-green-100/10 py-20 lg:py-36'>
+		<div class='mx-auto max-w-7xl px-14 lg:px-8'>
+		  <div class='mx-auto max-w-3xl lg:text-center'>
+			<span class='text-base font-semibold text-[#8DC841]'>
+				Expertos en cocheras electricas en torreon
+			</span>
+			<h2
+			  class='mt-4 text-3xl font-bold tracking-tight text-black_darkmode sm:text-5xl capitalize'
+			>
+			¿Por qué elegirnos para cualquiera de tus servicios de cocheras eléctricas?
+			</h2>			
+		  </div>
+	  
+		  <div class='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
+			<dl
+			  class='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'
+			>
+			  <!--  Escribo código limpio y sostenible -->
+			  <div class='relative pl-16'>
+				<dt class='text-base font-semibold text-black_darkmode'>
+				  <div
+					class='absolute left-0 top-0 flex w-8 items-center justify-center rounded-full bg-blue-600'
+				  >
+					<!-- <ModulesIcon /> -->
+				  </div>
+				  <h3>Experiencia solida en cocheras</h3>
+				</dt>
+				<dd class='mt-2 text-base text-black_darkmode/80'>
+					Contamos con expertos en cocheras eléctricas en torreon con años de experiencia en instalación, reparación y automatización de puertas automáticas de tipo industrial y residencial.
+				</dd>
+			  </div>
+	  
+			  <!-- Colaboración Multidisciplinaria -->
+			  <div class='relative pl-16'>
+				<dt class='text-base font-semibold text-black_darkmode'>
+				  <div
+					class='absolute left-0 top-0 flex w-8 items-center justify-center rounded-full bg-blue-600'
+				  >
+					<!-- <Asana /> -->
+				  </div>
+				  <h3>Calidad garantizada en tu servicio a tu porton electrico</h3>
+				  
+				</dt>
+				<dd class='mt-2 text-base text-black_darkmode/80'>
+					Ofrecemos productos y servicios de alta calidad ya sea para automatización, instalación, reparación de cocheras eléctricas y mantenimiento de cocheras americanas, respaldados por garantías sólidas.
+				</dd>
+			  </div>
+	  
+			  <!-- Diseño de componentes reutilizables -->
+			  <div class='relative pl-16'>
+				<dt class='text-base font-semibold text-black_darkmode'>
+				  <div
+					class='absolute left-0 top-0 flex w-8 items-center justify-center rounded-full bg-blue-600'
+				  >
+					<!-- <Atom /> -->
+				  </div>
+				  <h3>Reparaciones de cocheras electricas profesional</h3>
+				  
+				</dt>
+				<dd class='mt-2 text-base text-black_darkmode/80'>
+					Nuestro equipo está comprometido en brindar un servicio al cliente excepcional, adaptado a tus necesidades específicas.
+				</dd>
+			  </div>
+	  
+			  <!-- Nivel de ingles avanzando -->
+			  <div class='relative pl-16'>
+				<dt class='text-base font-semibold text-black_darkmode'>
+				  <div
+					class='absolute left-0 top-0 flex w-8 items-center justify-center rounded-full bg-blue-600'
+				  >
+					<!-- <World /> -->
+				  </div>
+				  <h3> Atención personalizada con tu porton electrico</h3>
+				 
+				</dt>
+				<dd class='mt-2 text-base text-black_darkmode/80'>
+					Valoramos a cada cliente y nos esforzamos por brindar un servicio personalizado que se adapte a tus necesidades individuales.
+				</dd>
+			  </div>
+			</dl>
+		  </div>
+		</div>
+	  </div>
+
+	<BlurCta/>
+
+	  <footer class='bg-green-100'>
+		<div class='mx-auto px-14 pb-8 pt-16 sm:pt-24 lg:px-40 lg:pt-32'>
+		  <div class='xl:grid xl:grid-cols-3 xl:gap-8'>
+			<div class='space-y-4'>
+			  <a id='logoIcon' href='/'>
+				<Logo dynamicClasses='w-[5.5rem]' />
+			  </a>
+	  
+			  <!-- Description -->			  
+				<h4 class="font-bold">Horarios:</h4>				
+				Lunes a Sabado de 9:00 - 19:00.							
+				<h4 class="font-bold">Teléfono:</h4>					
+				<a href="tel:8711413457">8711413457</a>								
+				<h4 class="font-bold">Dirección:</h4>					
+				Calle Río Sena 1357, Magdalenas, Torreón, Coahuila, 27010, Mexico														  				 			  			  
+			</div>
+	  
+			<!-- SubNavbar -->
+			<div class='mt-16 grid grid-cols-2 gap-x-8 xl:col-span-2 xl:mt-0'>			 
+	
+			  <!-- Derecha -->
+			  <div class='md:grid md:grid-cols-2 md:gap-8'>
+				<!-- Explore mas -->
+				<div>
+				  <h3 class='text-sm font-semibold leading-6 text-gray-900'>
+					Explore más
+				  </h3>
+				  <ul role='list' class='mt-6 space-y-2'>
+					<li>
+					  <a
+						href=''
+						class='text-sm leading-6 text-gray-600 hover:text-blue-500'
+						>Proximamente</a
+					  >
+					</li>
+	  
+				  </ul>
+				</div>
+	  				
+			  </div>
+			</div>
+		  </div>
+	  
+		  <div class='mt-16 border-t border-black/20 pt-8 sm:mt-20 lg:mt-24'>
+			<p class='text-xs'>
+			  © 2023 Cocheras Electricas En Torreon, Todos los derechos reservados. | Política de Privacidad
+			</p>
+		  </div>
+		</div>
+	  </footer>
+
+</Layout>

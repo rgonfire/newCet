@@ -1,0 +1,55 @@
+---
+import Button from "@components/Button.astro"
+import NavbarContainer from "@components/navbar/NavbarContainer.astro"
+import NavbarDesktopContainer from "@components/navbar/NavbarDesktopContainer.astro"
+import NavbarMobileContainer from "@components/navbar/NavbarMobileContainer.astro"
+import NavbarItemsContainer from "@components/navbar/NavbarItemsContainer.astro"
+import NavbarItem from "@components/navbar/NavbarItem.astro"
+import NavbarToggler from "@components/navbar/NavbarToggler.astro"
+import Logo from "@icons/Logo.astro"
+import Phone from "@icons/Phone.astro"
+---
+
+<div class="flex h-[5vh] items-center justify-between px-6 md:px-8">
+  <Logo dynamicClasses="font-medium text-sm" />
+    <div class="flex items-center justify-center">
+      <a href="tel:8711413457">
+        <Button variant="ghost" size="sm" text="8711413457">
+          <Phone dynamicClasses="w-4 mr-1.5" />
+        </Button>
+      </a>
+    </div>
+</div>
+
+<script>
+  function handleMenuToggle() {
+    const hamburguerIcon = document.getElementById("hamburguerIcon")
+    const closeIcon = document.getElementById("closeIcon")
+    const menuMobileContent = document.getElementById("menuMobileContent")
+
+    hamburguerIcon?.classList.toggle("hidden")
+    closeIcon?.classList.toggle("hidden")
+
+    if (menuMobileContent?.classList.contains("hidden")) {
+      menuMobileContent?.classList.toggle("hidden")
+      setTimeout(() => {
+        menuMobileContent?.classList.replace("opacity-0", "opacity-100")
+      }, 10)
+    } else {
+      menuMobileContent?.classList.replace("opacity-100", "opacity-0")
+      setTimeout(() => {
+        menuMobileContent?.classList.toggle("hidden")
+      }, 500)
+    }
+
+    document.body.classList.toggle("overflow-hidden")
+  }
+
+  window.addEventListener("click", (event) => {
+    const target = event.target as Element
+
+    if (target.closest("#hamburguerIcon") || target.closest("#closeIcon")) {
+      handleMenuToggle()
+    }
+  })
+</script>

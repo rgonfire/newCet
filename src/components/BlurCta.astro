@@ -1,0 +1,37 @@
+---
+import Circle from "@components/shapes/Circle.astro"
+import CenteredContainer from "@components/containers/CenteredContainer.astro"
+import Navbar from "@components/navbar/Navbar.astro"
+import BackgroundLayer from "@components/layers/BackgroundLayer.astro"
+import GlassmorphismBackgroundLayer from "@components/layers/GlassmorphismBackgroundLayer.astro"
+import TitleHeader from "@components/TitleHeader.astro"
+import Button from "@components/Button.astro"
+---
+
+<BackgroundLayer dynamicClasses="py-[13rem] md:py-[19rem] bg-[#8DC841]/80">	
+	<CenteredContainer>
+		<h3 class=`max-w-4xl text-3xl md:text-4xl lg:text-6xl mb-4 md:mb-8 font-bold tracking-tight`>
+      ¿Te interesa contratarnos? Tenemos respaldandonos años de experiencia
+    </h3>
+		<span
+			class="mb-4 max-w-2xl text-center text-base sm:text-lg md:mb-8 md:text-2xl"
+			>Aparta tu reparacion, mantenimiento o automatizacion de tu cocheras americana o porton de herreria</span
+		>
+		<div
+			class="mt-4 flex w-full flex-col items-center justify-center gap-x-8 gap-y-4 text-sm sm:flex-row md:gap-y-0"
+		>
+			<a href="tel:8711413457">
+				<Button
+					variant="default"
+					size="lg"
+					text="Agendar Cita: 8711413457"
+				/>
+			</a>
+			
+		</div>
+	</CenteredContainer>
+
+	<!-- Background Styles -->
+	<Circle dynamicClasses="top-1/2 right-1/3 w-[20rem] h-[20rem] md:w-[35rem] md:h-[35rem] bg-green-200/30" />
+	<GlassmorphismBackgroundLayer />
+</BackgroundLayer>
